@@ -1,0 +1,158 @@
+/*design-system*/
+
+:root{
+    /*spacing system */
+    --spacing-unit:4px; /* base unit */
+    --spacing-xxs:calc(var(--spacing-unit) * 1);   /* 4px */
+    --spacing-xs:calc(var(--spacing-unit) * 2);   /* 8px */
+    --spacing-xs1:calc(var(--spacing-unit) * 3);   /* 12px */
+    --spacing-sm:calc(var(--spacing-unit) * 4);   /* 16px */
+    --spacing-md:calc(var(--spacing-unit) * 8);   /* 32px */
+    --spacing-lg:calc(var(--spacing-unit) * 16);   /* 64px */
+    --spacing-xl:calc(var(--spacing-unit) * 24);  /* 96px */
+    --spacing-xxl:calc(var(--spacing-unit) * 32);  /* 128px */
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    line-height: 1.5;
+    direction: rtl;
+  }
+  @font-face{
+    font-family: 'IRANSans_light';
+    src: url(fonts/IRANSans_Light.ttf) format("truetype");
+ }
+ @font-face{
+    font-family: 'IRANSans_reg';
+    src: url(fonts/IRANSans.ttf) format("truetype");
+ }
+ @font-face{
+    font-family: 'IRANSans_Med';
+    src: url(fonts/IRANSans_Medium.ttf) format("truetype");
+ }
+ @font-face{
+    font-family: 'IRANSans_bol';
+    src: url(fonts/IRANSans_Bold.ttf) format("truetype");
+ }
+ @font-face{
+    font-family: 'kalame';
+    src: url(fonts/KalamehWeb_Regular.ttf) format("truetype");
+ }
+.outer-container{
+    border: 0.08px solid rgb(145 158 188);
+    border-radius: var(--spacing-sm);
+    margin: 40px var(--spacing-md);
+    padding-top: var(--spacing-md);
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+.title h2{
+    font-size: 24px;
+    font-family: 'IRANSans_bol';
+    padding-right: var(--spacing-sm);
+}
+.left-icon{
+    text-decoration: none;
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+    width: 100px;
+    margin-left: var(--spacing-xs1);
+    color: rgb(61, 44, 214);
+}
+.text-icon{
+    font-family: 'IRANSans_light';
+    font-size: var(--spacing-xs1); 
+    font-weight: bold;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+}
+.cards{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.card-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: var(--spacing-sm);
+    position: relative;
+}
+.card-box::after{
+    content: "";
+    display: block;
+    width: 1px;
+    background-color: rgb(145 158 188);
+    position: absolute;
+    top: var(--spacing-xxs);
+    bottom: var(--spacing-xxs);
+    left: -8px;
+}
+.card-box:last-child::after{
+    content: none;
+}
+.card-box img{
+    width: var(--spacing-xxl);
+    height: 100%;
+    padding-bottom: var(--spacing-xs1);
+}
+.descreption{
+    padding-right: var(--spacing-xs1);    
+}
+.descreption a{
+    text-decoration: none;
+    font-size: var(--spacing-xs1);
+    font-family: 'IRANSans_light';
+    color: black;   
+}
+.text-card{
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-xxs);
+    font-size: var(--spacing-xs1);
+    font-family: 'IRANSans_light';  
+    padding-top: var(--spacing-sm);
+}
+.text-card p{
+    font-weight: bold;
+}
+.btn{
+    border: none;
+    border-radius: 50%;
+    width: var(--spacing-md);
+    height: var(--spacing-md);
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-icon{
+    stroke: rgb(145 158 188);
+    cursor: pointer;
+    height: 24px;
+    width: 24px; 
+}
+.btn--left{
+    left: 0;
+    transform: translate(20px,0);
+}
+.btn--right{
+    right: 0;
+    transform: translate(-20px,0);
+}
