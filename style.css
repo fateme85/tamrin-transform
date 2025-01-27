@@ -91,7 +91,7 @@ body{
     margin-left: var(--spacing-sm);
     position: relative;
 }
-.card-box::after{
+.card-box:not(:last-child)::after{
     content: "";
     display: block;
     width: 1px;
@@ -100,9 +100,6 @@ body{
     top: var(--spacing-xxs);
     bottom: var(--spacing-xxs);
     left: -8px;
-}
-.card-box:last-child::after{
-    content: none;
 }
 .card-box img{
     width: var(--spacing-xxl);
